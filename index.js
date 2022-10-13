@@ -9,7 +9,7 @@ app.use(cors());
 
 app.get('/gerar', (req,res) => {
    
-   ejs.renderFile('./templates/index.ejs',{name:'MARCIO ALVES',cidade:'teixeira de freitas'},(err,html) =>{
+   ejs.renderFile('./templates/index.ejs',{name:'MARCIO ALVES da silva',cidade:'teixeira de freitas'},(err,html) =>{
     if (err){
         return res.status(500).json({message:'erro no servidor'});
     }
