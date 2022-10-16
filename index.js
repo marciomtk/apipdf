@@ -17,7 +17,7 @@ app.post('/pedido', (req,res) => {
    const nomedoc=dados.nomedoc;
    ejs.renderFile('./templates/index.ejs', dados, (err, html) =>{
     if (err){
-        return res.status(500).json({message:'erro no servidor'});
+        return res.status(500).json({message: 'erro no servidor', err});
     }
     
     const options = {
