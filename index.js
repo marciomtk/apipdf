@@ -7,6 +7,10 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get('/health', (req,res) => {
+    return res.json({ message: 'Servidor funcionando normalmente.' })     
+ });
+
 app.post('/pedido', (req,res) => {
    const dados =req.body;
    const nomedoc=dados.nomedoc;
@@ -33,7 +37,6 @@ app.post('/pedido', (req,res) => {
    });
 
 });
-
 
 app.listen(3333, function(){
     console.log('Servidor no ar.');
