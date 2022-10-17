@@ -27,14 +27,6 @@ app.post('/pedido', (req,res) => {
         }
     };
 
-    /*pdf.create(html,options).toFile('./uploads/'+nomedoc+'.pdf',(error,response) =>{
-        if (!error) {
-            return res.type('pdf').download('./uploads/'+nomedoc+'.pdf');
-        } else {
-            return res.json({message:'falha'});
-        }
-    })*/
-
     pdf.create(html,options).toBuffer((error, buffer) =>{
         if (error) {
             return res.json({message:'falha'}); 
